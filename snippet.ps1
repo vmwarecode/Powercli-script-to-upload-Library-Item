@@ -53,7 +53,7 @@ Function Add-LibraryItem {
 			[Parameter(Mandatory=$true)][string]$LibItemName,
 			[Parameter(Mandatory=$true)][string]$LibItemURLPath,
 			[Parameter(Mandatory=$false)][string][Validateset("Pull","Push")]$SourceType="PULL",
-			[Parameter(Mandatory=$false)][boolean]$SkipCertificateCheck
+			[Parameter(Mandatory=$false)][boolean]$SkipCertificateCheck=$false
 		)
 		
 		$ContentLibraryService = Get-CisService com.vmware.content.library
